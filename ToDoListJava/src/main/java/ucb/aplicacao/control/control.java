@@ -26,7 +26,9 @@ public class control {
     }
     
     //Listar todas tarefas
-    
+    public List<Tarefas> listarTarefas(){
+        return tarefas;
+    }
     
     
     

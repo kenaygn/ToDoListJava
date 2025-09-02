@@ -6,7 +6,11 @@ package ucb.aplicacao.view;
 
 import java.io.PrintStream;       
 import java.nio.charset.StandardCharsets; 
-import java.util.Scanner;         
+import java.util.Scanner;   
+
+import java.util.ArrayList;
+import java.util.List;
+
 import ucb.aplicacao.control.control;
 import ucb.aplicacao.model.Tarefas;
 
@@ -20,7 +24,7 @@ public class ToDoListJava {
         System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
         
         Scanner entrada = new Scanner(System.in);
-        control service = new control();
+        control servico = new control();
         
         while(true){
                 System.out.println("\n==== GERENCIADOR DE TAREFAS =====");
@@ -43,11 +47,24 @@ public class ToDoListJava {
                         System.out.println("Descricao: ");
                         String descricao = entrada.nextLine();
                         
-                        Tarefas nova = service.criarTarefas(titulo, descricao);
+                        Tarefas nova = servico.criarTarefas(titulo, descricao);
                         System.out.println(" Tarefa Criada: " + nova.getTitulo());
                     }
+                    case 2 ->{
+                        List<Tarefas> tarefas = servico.listarTarefas();
+                        
+                        if(tarefas.isEmpty()){
+                            System.out.println(" Nenhuma tarefa cadastrada.");
+                        } else {
+                            System.out.println("\n Lista de Tarefas: ");
+                            for(Tarefas t: tarefas){
+                                System.out.println(" Tiitulo: " + t.getTitulo());
+                                System.out.println(" Descrição: " + t.getDescricao());
+                                System.out.println(" Data de criação: " + t.getDataHora());
+                            }
+                        }
+                    }
                 }
-        }  
-        
+        }     
     }
 }
