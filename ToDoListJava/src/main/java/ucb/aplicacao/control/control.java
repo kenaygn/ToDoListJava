@@ -4,10 +4,30 @@
  */
 package ucb.aplicacao.control;
 
+import ucb.aplicacao.model.Tarefas;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
- * @author kenay
+ * @author kenay and manoel
  */
 public class control {
+    private List <Tarefas> tarefas = new ArrayList();
+    private Long contadorId = 1L;
+    
+    //Criar Tarefa
+    public Tarefas criarTarefas(String titulo, String descricao){
+        
+        //Metodos construtores
+        Tarefas tarefa = new Tarefas(contadorId++, titulo, descricao, false);
+        tarefas.add(tarefa);
+        return tarefa;
+    }
+    
+    //Listar todas tarefas
+    
+    
+    
     
 }

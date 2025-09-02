@@ -6,7 +6,7 @@ package ucb.aplicacao.view;
 
 /**
  *
- * @author kenay
+ * @author kenay and manoel
  */
 public class ToDoListJava {
 
