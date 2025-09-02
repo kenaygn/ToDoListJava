@@ -4,6 +4,11 @@
 
 package ucb.aplicacao.view;
 
+import java.io.PrintStream;       
+import java.nio.charset.StandardCharsets; 
+import java.util.Scanner;         
+import ucb.aplicacao.control.control;
+
 /**
  *
  * @author kenay and manoel
@@ -11,6 +16,30 @@ package ucb.aplicacao.view;
 public class ToDoListJava {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
+        
+        Scanner entrada = new Scanner(System.in);
+        control service = new control();
+        
+        while(true){
+                System.out.println("\n==== GERENCIADOR DE TAREFAS =====");
+                System.out.println("\n1. Criar Tarefa");
+                System.out.println("\n2. Listar Tarefas");
+                System.out.println("\n3. Atualizar Tarefa");
+                System.out.println("\n4. Remover Tarefa");
+                System.out.println("\n5. Sair");
+                System.out.println("\n\nEscolha uma opção:");
+                
+                
+                int opcao = entrada.nextInt();
+                entrada.nextLine(); 
+                
+                switch(opcao){
+                    case 1 -> {
+                        System.out.println("");
+                    }
+                }
+        };   
+        
     }
 }
