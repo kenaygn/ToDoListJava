@@ -24,12 +24,12 @@ public class ToDoListJava {
         
         while(true){
                 System.out.println("\n==== GERENCIADOR DE TAREFAS =====");
-                System.out.println("\n1. Criar Tarefa");
-                System.out.println("\n2. Listar Tarefas");
-                System.out.println("\n3. Atualizar Tarefa");
-                System.out.println("\n4. Remover Tarefa");
-                System.out.println("\n5. Sair");
-                System.out.println("\n\nEscolha uma opção:");
+                System.out.println("1. Criar Tarefa");
+                System.out.println("2. Listar Tarefas");
+                System.out.println("3. Atualizar Tarefa");
+                System.out.println("4. Remover Tarefa");
+                System.out.println("5. Sair");
+                System.out.println("Escolha uma opção:");
                 
                 
                 int opcao = entrada.nextInt();
