@@ -8,6 +8,7 @@ import java.io.PrintStream;
 import java.nio.charset.StandardCharsets; 
 import java.util.Scanner;         
 import ucb.aplicacao.control.control;
+import ucb.aplicacao.model.Tarefas;
 
 /**
  *
@@ -36,10 +37,17 @@ public class ToDoListJava {
                 
                 switch(opcao){
                     case 1 -> {
-                        System.out.println("");
+                        System.out.println("Titulo: ");
+                        String titulo = entrada.nextLine();
+                        
+                        System.out.println("Descricao: ");
+                        String descricao = entrada.nextLine();
+                        
+                        Tarefas nova = service.criarTarefas(titulo, descricao);
+                        System.out.println(" Tarefa Criada: " + nova.getTitulo());
                     }
                 }
-        };   
+        }  
         
     }
 }
