@@ -105,7 +105,7 @@ public class ToDoListJava {
                     }
                 }
                 case 5 -> {
-                    System.out.println("Saindo.");
+                    System.out.println("\nSaindo.");
                     return;
                 }
 
