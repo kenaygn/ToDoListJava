@@ -30,6 +30,25 @@ public class control {
         return tarefas;
     }
     
+    //Atualizar tarefa
+    
+    public Tarefas atualizarTarefas(Long id, String novoTitulo, String novaDescricao, boolean completa){
+        for(Tarefas tarefa: tarefas) {
+            // O id da tarefa ser o mesmo que a pessoa coloca
+            if (tarefa.getId().equals(id)) {
+                if (novoTitulo != null && !novoTitulo.isEmpty()) {
+                    tarefa.setTitulo(novoTitulo);
+                }
+                if (novaDescricao != null && !novaDescricao.isEmpty()) {
+                    tarefa.setDescricao(novaDescricao);
+                }
+                tarefa.setCompleta(completa);
+                return tarefa;
+            }
+        }
+        return null;
+    }
+    
     
     
 }
