@@ -49,6 +49,13 @@ public class control {
         return null;
     }
     
+    //Remover tarefa
+    
+    public boolean removerTarefa(Long id){
+        boolean removido = tarefas.removeIf(tarefa -> tarefa.getId().equals(id));
+        return removido;
+    }
+    
     
     
 }

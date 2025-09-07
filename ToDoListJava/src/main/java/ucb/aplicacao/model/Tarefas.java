@@ -7,7 +7,7 @@ package ucb.aplicacao.model;
 import java.time.LocalDateTime;
 /**
  *
- * @author kenay ana manoel
+ * @author kenay and manoel
  */
 public class Tarefas {
     

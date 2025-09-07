@@ -94,6 +94,15 @@ public class ToDoListJava {
                 }
                 case 4 -> {
                     //Funcao de remover
+                    System.out.print("\nID da tarefa para Excluir: ");
+                    Long id = entrada.nextLong();
+                    entrada.nextLine();
+                    boolean removido = servico.removerTarefa(id);
+                    if (removido){
+                        System.out.println("Tarefa removida com sucesso");
+                    }else{
+                        System.out.println("Nao foi possivel remover a tareda");
+                    }
                 }
                 case 5 -> {
                     System.out.println("Saindo.");
